@@ -1,5 +1,95 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #ff6b6b 0%, #ffa07a 50%, #87cefa 100%);
+    background-repeat: no-repeat;
+}
+.contenitore {
+    display: flex;
+    width: 1100px;
+    height: 620px;
+    background-color: white;
+}
+
+    /* parte sinistra */
+
+.box1 {
+    width: 40%;
+    height: 100%;
+    border: 1px solid blue;
+}
+.box2 {
+    width: 60%;
+    height: 100%;
+    border: 1px solid blue;
+}
+.item1 {
+    width: 100%;
+    height: 15%;
+    border: 1px solid red;
+    background-color: #EAEAEA;
+}
+.item2 {
+    width: 100%;
+    height: 20%;
+    border: 1px solid red;
+    background-color: #D4F4F7;
+    display: flex;
+}
+.uno {
+    width: 10%;
+    height: 100%;
+}
+.uno i {
+    background-color: white;
+    font-size: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.due {
+    width: 90%;
+    height: 100%;
+}
+.figlio1 {
+    width: 100%;
+    height: 40%;
+}
+.figlio1 {
+    width: 100%;
+    height: 20%;
+}
+.figlio1 {
+    width: 100%;
+    height: 40%;
+}
+.ricerca {
+    width: 300px;
+}
+.son {
+width: 50%;
+height: 100%;
+border: 1px solid red;
+}
+.son1 {
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.son1 i {
+    margin-right: 15px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color:  #ff6b6b;
+    cursor: pointer;
 }
