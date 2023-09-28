@@ -13,9 +13,11 @@
      
         <div class="contenitore ">
             <div class="box1 d-flex flex-column">
+                <!-- parte sinistra -->
                 <div class="item1 d-flex ">
                     <div class="son">
-
+                        <img class="d-inline-block" src="img/avatar_1.jpg" alt="img">
+                        <span class="ms-2 mb-2">Antonio</span>
                     </div>
                     <div class="son1">
                         <i class="fa-solid fa-phone"></i>
@@ -40,8 +42,19 @@
                             </div>
                     </div>
                 </div>
-                <div class="item3"></div>
+                <div class="item3 overflow-scroll d-flex flex-column">
+                    <div class="dad d-flex  " v-for="(elem, index) in contacts ":key="index">
+                        <div class="rtr-img d-flex justify-content-center align-items-center">
+                            <img class="sister" :src="elem.avatar" alt="">
+                        </div>
+                        <div class="rtr-frasi">
+                            <p class="mt-3">{{elem.name}}</p>
+                            <p>{{elem.messages[elem.messages.length -1].message}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+                <!-- parte destra -->
             <div class="box2">
 
             </div>

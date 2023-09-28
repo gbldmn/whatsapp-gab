@@ -34,14 +34,12 @@ body {
 .item1 {
     width: 100%;
     height: 15%;
-    border: 1px solid red;
     background-color: #EAEAEA;
 }
 .item2 {
     width: 100%;
     height: 20%;
-    border: 1px solid red;
-    background-color: #D4F4F7;
+    background-color: #8EC6F1;
     display: flex;
 }
 .uno {
@@ -53,6 +51,7 @@ body {
     font-size: 45px;
     border-radius: 20px;
     cursor: pointer;
+    color: #ff6b6b;
 }
 .due {
     width: 90%;
@@ -72,16 +71,18 @@ body {
 }
 .ricerca {
     width: 300px;
+    margin-bottom: 10px;
 }
 .son {
 width: 50%;
 height: 100%;
-border: 1px solid red;
+display: flex;
+align-items: center;
+justify-content: start;
 }
 .son1 {
     width: 50%;
     height: 100%;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -89,7 +90,41 @@ border: 1px solid red;
 .son1 i {
     margin-right: 15px;
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color:  #ff6b6b;
     cursor: pointer;
+}
+.son img {
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    /* margin-bottom: 15px; */
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.son span {
+    color: #ff6b6b;
+}
+.figlio2 a {
+    color: #ff6b6b;
+}
+.sister {
+    display: inline-block;
+}
+.dad img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.rtr-img {
+    width: 20%;
+    height: 100%;
+}
+.rtr-frasi {
+    width: 80%;
+    height: 100%;
+}
+.dad:hover {
+    background: linear-gradient(180deg, #ff6b6b 0%, #ffa07a 50%, #87cefa 100%);
 }
