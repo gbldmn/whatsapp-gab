@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="item3 overflow-scroll d-flex flex-column">
-                    <div class="dad d-flex  " v-for="(elem, index) in contacts ":key="index" ">
+                    <div class="dad d-flex  " v-for="(elem, index) in contacts ":key="index" @click="cambioDati(index)">
                         <div class="rtr-img d-flex justify-content-center align-items-center">
                             <img class="sister" :src="elem.avatar" alt="">
                         </div>
@@ -56,34 +56,35 @@
             </div>
                 <!-- parte destra -->
             <div class="box2 d-flex flex-column">
-
-                <div class="box2 d-flex flex-column">
-                    <div class="chat-superiore d-flex">
-                        <div class="car">
-                            <div class="rtr-img d-flex justify-content-center align-items-center">
-                               
-                            </div>
-                            <div class="rtr-frasi">
-
-                            </div>
+                <div class="item4">
+                    <div class="son me-3">
+                        <img class="image me-3 rtr-img" v-bind:src="contacts[selectedContact].avatar" alt="">
+                        <div class="d-inline-block mt-1">
+                           <span class="me-1" >{{contacts[selectedContact].name}}</span>
+                           <span class="color">ultimo accesso oggi {{contacts[selectedContact].messages[ contacts[selectedContact].messages.length - 1 ].date}}</span>
                         </div>
-                      <div class="son1">
-                        <!-- Altri contenuti qui -->
-                      </div>
                     </div>
-                  </div>
-                  
-
-
-
-
+                    <div class="son1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                
+                <div class="message-write">
+                    <div class="message">
+                        <p v-for="(elem, index) in contacts[selectedContact].messages" :class="{ 'verde': elem.status === 'sent' }">
+                        {{ elem.message }}
+                        </p>
+                    </div>
+                    <div class="message2">
+                        <p v-for="(elem, index) in contacts[selectedContact].messages" :class="{ 'bianco': elem.status === 'received' }">
+                            {{ elem.message }}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
     </div>
 
 

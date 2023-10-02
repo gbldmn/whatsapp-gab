@@ -3,11 +3,11 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            selectedContact: {},
+            selectedContact: 0,
             contacts: [
                 {
-                    name: 'Michele',
-                    avatar: './img/avatar_1.jpg',
+                    name: 'Pietro',
+                    avatar: './img/pietro.jpg',
                     visible: true,
                     messages: [
                         {
@@ -28,8 +28,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Fabio',
-                    avatar: './img/avatar_2.jpg',
+                    name: 'beatrice',
+                    avatar: './img/beatrice.jpg',
                     visible: true,
                     messages: [
                         {
@@ -50,8 +50,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
-                    avatar: './img/avatar_3.jpg',
+                    name: 'Lorenzo',
+                    avatar: './img/lorenzo.jpg',
                     visible: true,
                     messages: [
                         {
@@ -72,8 +72,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
-                    avatar: './img/avatar_4.jpg',
+                    name: 'Veronica',
+                    avatar: './img/veronica.jpg',
                     visible: true,
                     messages: [
                         {
@@ -89,8 +89,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
-                    avatar: './img/avatar_5.jpg',
+                    name: 'Marianna',
+                    avatar: './img/marianna.jpg',
                     visible: true,
                     messages: [
                         {
@@ -106,8 +106,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
-                    avatar: './img/avatar_6.jpg',
+                    name: 'Angelo',
+                    avatar: './img/angelo.jpg',
                     visible: true,
                     messages: [
                         {
@@ -128,8 +128,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
-                    avatar: './img/avatar_7.jpg',
+                    name: 'Marco',
+                    avatar: './img/marco.jpg',
                     visible: true,
                     messages: [
                         {
@@ -145,8 +145,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Davide',
-                    avatar: './img/avatar_8.jpg',
+                    name: 'Starnino',
+                    avatar: './img/Starnino.jpg',
                     visible: true,
                     messages: [
                         {
@@ -169,12 +169,12 @@ createApp({
             ]
         }
     },
-    mounted(){
+    mounted() {
 
     },
     methods: {
-        cambia(elem){
-            this.selectedContact = elem;
-        }                    
+        cambioDati(index){
+            this.selectedContact = index
+            } 
     }
 }).mount('#app')
