@@ -73,14 +73,9 @@
                 
                 <div class="message-write">
                     <div class="message">
-                        <p v-for="(elem, index) in contacts[selectedContact].messages" :class="{ 'verde': elem.status === 'sent' }">
+                        <span v-for="(elem, index) in contacts[selectedContact].messages" :key="index" :class="{ 'verde': elem.status === 'sent', 'bianco': elem.status === 'received'}">
                         {{ elem.message }}
-                        </p>
-                    </div>
-                    <div class="message2">
-                        <p v-for="(elem, index) in contacts[selectedContact].messages" :class="{ 'bianco': elem.status === 'received' }">
-                            {{ elem.message }}
-                        </p>
+                        </span>
                     </div>
                 </div>
             </div>
