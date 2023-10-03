@@ -16,8 +16,8 @@
                 <!-- parte sinistra -->
                 <div class="item1 d-flex ">
                     <div class="son">
-                        <img class="d-inline-block" src="img/sofia.jpg" alt="img">
-                        <span class="ms-2 mb-2">Sofia</span>
+                        <img class="d-inline-block" src="img/gabriele.jpg" alt="img">
+                        <span class="ms-2 mb-2"><strong>Gabriele</strong></span>
                     </div>
                     <div class="son1">
                         <i class="fa-solid fa-phone"></i>
@@ -48,7 +48,7 @@
                             <img class="sister" :src="elem.avatar" alt="">
                         </div>
                         <div class="rtr-frasi">
-                            <p class="mt-3">{{elem.name}}</p>
+                            <p class="mt-4"> <strong>{{elem.name}}</strong></p>
                             <p>{{elem.messages[elem.messages.length -1].message}}</p>
                         </div>
                     </div>
@@ -73,10 +73,15 @@
                 
                 <div class="message-write">
                     <div class="message">
-                        <span v-for="(elem, index) in contacts[selectedContact].messages" :key="index" :class="{ 'verde': elem.status === 'sent', 'bianco': elem.status === 'received'}">
+                        <span v-for="(elem, index) in contacts[selectedContact].messages" :key="index" :class="{ 'bianco': elem.status === 'sent', 'verde': elem.status === 'received'}">
                         {{ elem.message }}
                         </span>
                     </div>
+                </div>
+                <div class="barraScrittura d-flex align-items-center justify-content-center">
+                    <i class="fa-regular fa-face-smile-beam me-3"></i>
+                    <input class="w-75" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto">
+                    <i class="fa-solid fa-microphone ms-3"></i>
                 </div>
             </div>
         </div>

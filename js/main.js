@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             selectedContact: 0,
+            nuovoTesto:'',
             contacts: [
                 {
                     name: 'Pietro',
@@ -128,18 +129,18 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Marco',
-                    avatar: './img/marco.jpg',
+                    name: 'Sofia',
+                    avatar: './img/sofia.jpg',
                     visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                            message: 'che fai?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                            message: 'niente, mandami una foto di Poldino',
                             status: 'received'
                         }
                     ],
@@ -175,6 +176,32 @@ createApp({
     methods: {
         cambioDati(index){
             this.selectedContact = index
+        },
+        inviaDati(){
+        let messaggi = this.contacts[this.selectedContact].messages;
+            if(this.nuovoTesto != ""){
+
+                messaggi.push(
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: this.nuovoTesto,
+                        status: 'received'
+                    } );
+                    this.nuovoTesto = ''
+
+
+
+                    setTimeout(function(){
+                        messaggi.push(
+                            {
+                                date: '03/10/2023 19:51:01',
+                                message: 'non posso sta di sotto con il babbo',
+                                status: 'sent'
+                            }
+                        );
+                    }, 4000 );
             } 
-    }
+        }    
+    },
+
 }).mount('#app')
