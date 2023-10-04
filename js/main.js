@@ -5,6 +5,7 @@ createApp({
         return {
             selectedContact: 0,
             nuovoTesto:'',
+            nuovaIcona:'',
             contacts: [
                 {
                     name: 'Pietro',
@@ -177,6 +178,43 @@ createApp({
         cambioDati(index){
             this.selectedContact = index
         },
+
+
+        visualizza(){
+        // Utilizza "this" per accedere all'elemento Vue
+        let preso = document.querySelector('.icone');
+        console.log(preso);
+        // Rimuovi la classe "ver" e aggiungi la classe "ter"
+        preso.classList.remove("ver");
+        preso.classList.add("ter");
+        },
+
+        selezionaIcona() {
+               // Ottieni il nome della classe dell'icona (ad esempio, "fa-regular fa-face-smile")
+               const nomeClasseIcona = event.target.className;
+    
+               // Crea un elemento <span> con l'icona FontAwesome
+               const iconaElement = document.createElement('span');
+               iconaElement.className = nomeClasseIcona;
+           
+               // Ottieni l'inputBar per inserire l'icona
+               const inputBar = document.querySelector('.we');
+           
+               // Aggiungi l'icona all'inputBar
+               inputBar.appendChild(iconaElement);
+           
+               // Chiudi il div delle icone (se necessario)
+               this.chiudiDivIcone();
+
+        },
+
+        chiudiDivIcone() {
+            // Utilizza "this" per accedere all'elemento Vue
+            const preso = document.querySelector('.icone');
+            preso.classList.remove("ter");
+            preso.classList.add("ver");
+        },
+
         inviaDati(){
         let messaggi = this.contacts[this.selectedContact].messages;
             if(this.nuovoTesto != ""){
@@ -195,7 +233,7 @@ createApp({
                         messaggi.push(
                             {
                                 date: '03/10/2023 19:51:01',
-                                message: 'non posso sta di sotto con il babbo',
+                                message: 'va bene!',
                                 status: 'sent'
                             }
                         );

@@ -202,4 +202,26 @@ cursor: pointer;
 }
 .barraScrittura input {
     height: 56%;
-    }
+    position: relative;
+}
+.icone {
+width: 200px;
+height: 200px;
+overflow: scroll;
+border: 1px solid violet;
+background-color: #EAEAEA;
+position: absolute;
+z-index: 99;
+left: 45%;
+bottom: 8%;
+}
+.icone i {
+padding: 4px;
+margin-left: 10px;
+}
+.ver {
+display: none;
+}
+.ter {
+display: block;
+}

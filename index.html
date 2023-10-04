@@ -79,9 +79,19 @@
                     </div>
                 </div>
                 <div class="barraScrittura d-flex align-items-center justify-content-center">
-                    <i class="fa-regular fa-face-smile-beam me-3"></i>
-                    <input class="w-75" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto">
-                    <i class="fa-solid fa-microphone ms-3"></i>
+                    <i class="fa-regular fa-face-smile-beam me-3" @click="visualizza()"></i>
+                    <div class="icone ver"  @click="selezionaIcona" v-model="nuovaIcona">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <i class="fa-regular fa-face-angry"></i>
+                        <i class="fa-regular fa-face-smile-wink"></i>
+                        <i class="fa-regular fa-face-frown"></i>
+                    </div>
+                    <!-- <input  class="w-75 we" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto">
+                    <i class="fa-solid fa-microphone ms-3" ></i> -->
+                    <div class="input-group">
+                        <input type="text" class="form-control w-75 we" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto" placeholder="Inserisci testo...">
+                        <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
