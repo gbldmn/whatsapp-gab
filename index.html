@@ -13,7 +13,9 @@
      
         <div class="contenitore ">
             <div class="box1 d-flex flex-column">
-                <!-- parte sinistra -->
+                               
+                               <!-- parte sinistra -->
+
                 <div class="item1 d-flex ">
                     <div class="son">
                         <img class="d-inline-block" src="img/gabriele.jpg" alt="img">
@@ -42,7 +44,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="item3 overflow-scroll d-flex flex-column">
+                <div class="item3 d-flex flex-column">
                     <div class="dad d-flex  " v-for="(elem, index) in contacts " :class="(elem.visible == true) ? 'd-block' : 'd-none' " @click="cambioDati(index)">
                         <div class="rtr-img d-flex justify-content-center align-items-center">
                             <img class="sister" :src="elem.avatar" alt="">
@@ -54,7 +56,9 @@
                     </div>
                 </div>
             </div>
-                <!-- parte destra -->
+
+                                 <!-- parte destra -->
+
             <div class="box2 d-flex flex-column">
                 <div class="item4">
                     <div class="son me-3">

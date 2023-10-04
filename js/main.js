@@ -176,33 +176,30 @@ createApp({
     },
     methods: {
         cambioDati(index){
+            
             this.selectedContact = index
         },
         visualizza(){
-        // Utilizza "this" per accedere all'elemento Vue
+
         let preso = document.querySelector('.icone');
         console.log(preso);
-        // Rimuovi la classe "ver" e aggiungi la classe "ter"
         preso.classList.remove("ver");
         preso.classList.add("ter");
         },
         selezionaIcona() {
-            // Ottieni il nome della classe dell'icona (ad esempio, "fa-regular fa-face-smile")
-            const nomeClasseIcona = event.target.className;
             
-            // Imposta la variabile nuovaIcona con il nome della classe
-            this.nuovaIcona = nomeClasseIcona;
-        
-            // Chiudi il div delle icone (se necessario)
+            const nomeClasseIcona = event.target.className;
+            this.nuovaIcona = nomeClasseIcona; 
             this.chiudiDivIcone();
         },
         chiudiDivIcone() {
-            // Utilizza "this" per accedere all'elemento Vue
+            
             const preso = document.querySelector('.icone');
             preso.classList.remove("ter");
             preso.classList.add("ver");
         },
         inviaDati(){
+
         let messaggi = this.contacts[this.selectedContact].messages;
             if(this.nuovoTesto != ""){
 
@@ -228,6 +225,7 @@ createApp({
             } 
         },
         cercaChat(){
+
             this.contacts.forEach(element => {
                 if (!element.name.includes(this.cercaUtente) && this.cercaUtente != ''){
                     element.visible = false
