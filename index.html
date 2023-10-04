@@ -38,12 +38,12 @@
                               <a class="me-5 mb-2" href="">attiva notifiche desktop</a>  
                             </div>
                             <div class="figlio3 ">
-                                <input class="ricerca" type="text" placeholder="cerca utente">
+                                <input class="ricerca" type="text" placeholder="cerca utente" v-model="cercaUtente"  @keyUp="cercaChat">
                             </div>
                     </div>
                 </div>
                 <div class="item3 overflow-scroll d-flex flex-column">
-                    <div class="dad d-flex  " v-for="(elem, index) in contacts ":key="index" @click="cambioDati(index)">
+                    <div class="dad d-flex  " v-for="(elem, index) in contacts " :class="(elem.visible == true) ? 'd-block' : 'd-none' " @click="cambioDati(index)">
                         <div class="rtr-img d-flex justify-content-center align-items-center">
                             <img class="sister" :src="elem.avatar" alt="">
                         </div>
@@ -79,18 +79,41 @@
                     </div>
                 </div>
                 <div class="barraScrittura d-flex align-items-center justify-content-center">
-                    <i class="fa-regular fa-face-smile-beam me-3" @click="visualizza()"></i>
+                    <i class="fa-regular fa-face-smile-beam me-2 ms-2" @click="visualizza() "></i>
                     <div class="icone ver"  @click="selezionaIcona" v-model="nuovaIcona">
                         <i class="fa-regular fa-face-smile"></i>
                         <i class="fa-regular fa-face-angry"></i>
                         <i class="fa-regular fa-face-smile-wink"></i>
                         <i class="fa-regular fa-face-frown"></i>
+                        <i class="fa-solid fa-face-sad-cry"></i>
+                        <i class="fa-solid fa-face-tired"></i>
+                        <i class="fa-solid fa-face-surprise"></i>
+                        <i class="fa-solid fa-face-rolling-eyes"></i>
+                        <i class="fa-solid fa-face-kiss"></i>
+                        <i class="fa-solid fa-face-grimace"></i>
+                        <i class="fa-solid fa-face-angry"></i>
+                        <i class="fa-regular fa-face-grin-stars"></i>
+                        <i class="fa-regular fa-face-dizzy"></i>
+                        <i class="fa-regular fa-face-grin-hearts"></i>
+                        <i class="fa-regular fa-face-grin-squint-tears"></i>
+                        <i class="fa-solid fa-skull"></i>
+                        <i class="fa-solid fa-horse"></i>
+                        <i class="fa-solid fa-person-running"></i>
+                        <i class="fa-solid fa-mobile"></i>
+                        <i class="fa-solid fa-shower"></i>
+                        <i class="fa-solid fa-wine-glass-empty"></i>
+                        <i class="fa-solid fa-fax"></i>
+                        <i class="fa-solid fa-person-snowboarding"></i>
+                        <i class="fa-regular fa-hand-peace"></i>
+                        <i class="fa-solid fa-faucet"></i>
+                        <i class="fa-solid fa-dice-five"></i>
                     </div>
-                    <!-- <input  class="w-75 we" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto">
-                    <i class="fa-solid fa-microphone ms-3" ></i> -->
                     <div class="input-group">
-                        <input type="text" class="form-control w-75 we" type="text" @keyUp.enter="inviaDati" v-model="nuovoTesto" placeholder="Inserisci testo...">
-                        <span class="input-group-text"><i class="fa-regular fa-face-smile"></i></span>
+                        <input type="text" class="form-control w-75 we" @keyup.enter="inviaDati" v-model="nuovoTesto" placeholder="inserisci testo...">
+
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-microphone"></i>
+                        </span>
                     </div>
                 </div>
             </div>
